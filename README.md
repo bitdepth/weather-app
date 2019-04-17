@@ -1,10 +1,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Apologies, I know the brief stated no globally installed dependencies but i ran into an obscure [issue](https://github.com/facebook/create-react-app/issues/5259) with `create-react-app` and installing dependencies with npm and had to resort to using yarn to run the tests.
+Apologies, I know the brief stated no globally installed dependencies but i ran into an obscure [issue](https://github.com/facebook/create-react-app/issues/5259) with `create-react-app` and installing dependencies with npm and had to resort to using yarn to install the dependencies.
 The App will run and build with npm but the tests bomb out.
 
-Also the tests were running in codesandbox but when i mocked axios they stopped working. I didn't have time to figure out what the issue was.
+Also the tests were running in CodeSandbox but when i mocked axios they stopped working. I didn't have time to figure out what the issue was.
 
 The other issue i encountered was with the version of node i was running on my machine and the version of jest required by create-react-app. I tried upgrading jest but this didn't work. The only option that worked for me was to upgrade node. I've added an engines entry in package.json specifying the version of node required.
 
