@@ -1,4 +1,5 @@
 
+# Weather App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Apologies, I know the brief stated no globally installed dependencies but i ran into an obscure [issue](https://github.com/facebook/create-react-app/issues/5259) with `create-react-app` and installing dependencies with npm and had to resort to using yarn to install the dependencies.
@@ -11,6 +12,8 @@ The other issue i encountered was with the version of node i was running on my m
 Finally i'm getting a warning about `React state updates should be wrapped in act()` when running the tests. From doing a bit of googling i think the tooling is just catching up with react hooks at the moment and the warning is nothing to worry about. Wrapping the render function in an act function didn't solve the warning. See link below for more details.
 
 https://github.com/facebook/react/issues/14769
+
+Deployed project can be viewed on [CodeSandbox](https://codesandbox.io/s/github/bitdepth/weather-app)
   
 ## Available Scripts
 Install dependencies:  
@@ -46,7 +49,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
   
 ### UI  
  
-I didn't spend a lot of time on the ui so obviously there is a lot of room for improvement there. I opted to use `rebass` because even though it was new to me it's similar to a proprietary system i've been using at work lately and i've been really enjoying using styled components in development. A couple of real improvements would be using icons for the weather description and allowing the user to enter a location or possibly use the browser geolocation api to show weather for the users current location. You could also use more of the data to provide a richer experience or have a responsive experience which adapts to viewport width. With more time i would also like to work on the rendered html to provide a more semantic and accessible experience for users.
+I didn't spend a lot of time on the ui even though i would consider my primary skill set to be ui development. Obviously there is a lot of room for improvement there. I opted to use `rebass` because even though it was new to me it's similar to a proprietary system i've been using at work lately and i've been really enjoying using styled components in development. A couple of real improvements would be using icons for the weather description and allowing the user to enter a location or possibly use the browser geolocation api to show weather for the users current location. You could also use more of the data to provide a richer experience or have a responsive experience which adapts to viewport width. With more time i would also like to work on the rendered html to provide a more semantic and accessible experience for users.
 
 ### Code  
   
