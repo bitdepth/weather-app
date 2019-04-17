@@ -43,21 +43,21 @@ function Forecast() {
     }
 
     return (
-        <>
-            {!dailyWeatherData.length ? <Loading /> :
-                <Flex
-                    width={1}
-                    alignItems='center'
-                    justifyContent='center'
-                    flexDirection='column'
-                    data-testid='weather-app'
+        <Flex
+            width={1}
+            alignItems='center'
+            justifyContent='center'
+            flexDirection='column'
+            data-testid='weather-app'
 
-                >
+        >
+            {!dailyWeatherData.length ? <Loading /> :
+                <>
                     <ForecastToday {...todaysForecast} />
                     <Forecast4Day forecast={next4DaysForecast}/>
-                </Flex>
+                </>
             }
-        </>
+        </Flex>
     );
 }
 

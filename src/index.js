@@ -12,9 +12,7 @@ function App() {
         <Flex
             px={4}
             py={4}
-
         >
-
             <Forecast/>
         </Flex>
     );
