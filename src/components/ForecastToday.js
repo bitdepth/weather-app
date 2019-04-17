@@ -5,7 +5,7 @@ import {
     Text,
 } from '@rebass/emotion';
 
-export function ForecastToday({city, description}) {
+export function ForecastToday({city, description, high}) {
 
     return (
         <Box
@@ -34,7 +34,7 @@ export function ForecastToday({city, description}) {
                 textAlign='center'
                 color='black'
             >
-                7 &deg;
+                {high} &deg;
             </Text>
 
         </Box>

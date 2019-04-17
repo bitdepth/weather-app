@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import startCase from 'lodash/startCase';
-import { API_KEY, API_URL } from '../config';
+import { API_KEY, API_URL } from '../config/config';
 
 import { ForecastToday, Forecast5Day } from '../components';
 
