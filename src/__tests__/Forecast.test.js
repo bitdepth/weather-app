@@ -2,7 +2,6 @@ import React from 'react';
 import axiosMock from 'axios';
 import 'jest-dom/extend-expect';
 
-import { act } from 'react-dom/test-utils';
 import { render, cleanup, waitForElement } from 'react-testing-library';
 
 import Forecast from '../containers/Forecast';
