@@ -4,7 +4,7 @@ import moment from 'moment';
 import startCase from 'lodash/startCase';
 import { API_KEY, API_URL } from '../config/config';
 
-import { ForecastToday, Forecast5Day } from '../components';
+import { ForecastToday, Forecast4Day } from '../components';
 
 const convertKelvinToCelsius = (kelvin) => Math.round(((kelvin - 273.15)));
 
@@ -44,7 +44,7 @@ function Forecast() {
     return (
         <>
             <ForecastToday {...todaysForecast} />
-            <Forecast5Day forecast={next4DaysForecast}/>
+            <Forecast4Day forecast={next4DaysForecast}/>
         </>
     );
 }

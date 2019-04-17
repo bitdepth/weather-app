@@ -44,10 +44,10 @@ const DayForecast = ({day, description, low, high}) => (
 );
 
 
-export function Forecast5Day({forecast = []}) {
+export function Forecast4Day({forecast = []}) {
     return (
         <>
-            {forecast.map((day) => <DayForecast {...day} />)}
+            {forecast.map((item) => <DayForecast key={item.day} {...item} />)}
         </>
     );
 }
