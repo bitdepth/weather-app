@@ -31,278 +31,291 @@ exports[`Component: Forecast4Day matches snapshot 1`] = `
     ]
   }
 >
-  <DayForecast
-    day="Tue"
-    description="Light Rain"
-    high={14}
-    key="Tue"
-    low={5}
+  <Styled(div)
+    alignItems="center"
+    data-testid="weather-4day"
+    flexDirection="column"
+    width={1}
   >
-    <Styled(div)
-      bg="white"
-      color="magenta"
-      justifyContent="space-between"
-      p={3}
-      width={0.5}
+    <div
+      className="css-1jqcmjx"
+      data-testid="weather-4day"
+      width={1}
     >
-      <div
-        className="css-14dzn46"
-        color="magenta"
-        width={0.5}
+      <DayForecast
+        day="Tue"
+        description="Light Rain"
+        high={14}
+        key="Tue"
+        low={5}
       >
         <Styled(div)
-          color="black"
-          textAlign="center"
+          bg="white"
+          color="magenta"
+          justifyContent="space-between"
+          p={3}
+          width={0.5}
         >
           <div
-            className="css-1xq5fjj"
-            color="black"
+            className="css-14dzn46"
+            color="magenta"
+            width={0.5}
           >
-            Tue
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Tue
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Light Rain
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                14
+                 °
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                5
+                 °
+              </div>
+            </Styled(div)>
           </div>
         </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            Light Rain
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            14
-             °
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            5
-             °
-          </div>
-        </Styled(div)>
-      </div>
-    </Styled(div)>
-  </DayForecast>
-  <DayForecast
-    day="Wed"
-    description="Scatterred Clouds"
-    high={17}
-    key="Wed"
-    low={6}
-  >
-    <Styled(div)
-      bg="white"
-      color="magenta"
-      justifyContent="space-between"
-      p={3}
-      width={0.5}
-    >
-      <div
-        className="css-14dzn46"
-        color="magenta"
-        width={0.5}
+      </DayForecast>
+      <DayForecast
+        day="Wed"
+        description="Scatterred Clouds"
+        high={17}
+        key="Wed"
+        low={6}
       >
         <Styled(div)
-          color="black"
-          textAlign="center"
+          bg="white"
+          color="magenta"
+          justifyContent="space-between"
+          p={3}
+          width={0.5}
         >
           <div
-            className="css-1xq5fjj"
-            color="black"
+            className="css-14dzn46"
+            color="magenta"
+            width={0.5}
           >
-            Wed
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Wed
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Scatterred Clouds
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                17
+                 °
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                6
+                 °
+              </div>
+            </Styled(div)>
           </div>
         </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            Scatterred Clouds
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            17
-             °
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            6
-             °
-          </div>
-        </Styled(div)>
-      </div>
-    </Styled(div)>
-  </DayForecast>
-  <DayForecast
-    day="Thurs"
-    description="Moderate Rain"
-    high={15}
-    key="Thurs"
-    low={3}
-  >
-    <Styled(div)
-      bg="white"
-      color="magenta"
-      justifyContent="space-between"
-      p={3}
-      width={0.5}
-    >
-      <div
-        className="css-14dzn46"
-        color="magenta"
-        width={0.5}
+      </DayForecast>
+      <DayForecast
+        day="Thurs"
+        description="Moderate Rain"
+        high={15}
+        key="Thurs"
+        low={3}
       >
         <Styled(div)
-          color="black"
-          textAlign="center"
+          bg="white"
+          color="magenta"
+          justifyContent="space-between"
+          p={3}
+          width={0.5}
         >
           <div
-            className="css-1xq5fjj"
-            color="black"
+            className="css-14dzn46"
+            color="magenta"
+            width={0.5}
           >
-            Thurs
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Thurs
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Moderate Rain
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                15
+                 °
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                3
+                 °
+              </div>
+            </Styled(div)>
           </div>
         </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            Moderate Rain
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            15
-             °
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            3
-             °
-          </div>
-        </Styled(div)>
-      </div>
-    </Styled(div)>
-  </DayForecast>
-  <DayForecast
-    day="Fri"
-    description="Broken Clouds"
-    high={17}
-    key="Fri"
-    low={5}
-  >
-    <Styled(div)
-      bg="white"
-      color="magenta"
-      justifyContent="space-between"
-      p={3}
-      width={0.5}
-    >
-      <div
-        className="css-14dzn46"
-        color="magenta"
-        width={0.5}
+      </DayForecast>
+      <DayForecast
+        day="Fri"
+        description="Broken Clouds"
+        high={17}
+        key="Fri"
+        low={5}
       >
         <Styled(div)
-          color="black"
-          textAlign="center"
+          bg="white"
+          color="magenta"
+          justifyContent="space-between"
+          p={3}
+          width={0.5}
         >
           <div
-            className="css-1xq5fjj"
-            color="black"
+            className="css-14dzn46"
+            color="magenta"
+            width={0.5}
           >
-            Fri
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Fri
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                Broken Clouds
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                17
+                 °
+              </div>
+            </Styled(div)>
+            <Styled(div)
+              color="black"
+              textAlign="center"
+            >
+              <div
+                className="css-1xq5fjj"
+                color="black"
+              >
+                5
+                 °
+              </div>
+            </Styled(div)>
           </div>
         </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            Broken Clouds
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            17
-             °
-          </div>
-        </Styled(div)>
-        <Styled(div)
-          color="black"
-          textAlign="center"
-        >
-          <div
-            className="css-1xq5fjj"
-            color="black"
-          >
-            5
-             °
-          </div>
-        </Styled(div)>
-      </div>
-    </Styled(div)>
-  </DayForecast>
+      </DayForecast>
+    </div>
+  </Styled(div)>
 </Forecast4Day>
 `;
 
@@ -317,12 +330,14 @@ exports[`Component: ForecastToday matches snapshot 1`] = `
   <Styled(div)
     bg="white"
     color="magenta"
+    data-testid="weather-today"
     p={3}
     width={0.5}
   >
     <div
       className="css-z4r8di"
       color="magenta"
+      data-testid="weather-today"
       width={0.5}
     >
       <Styled(div)

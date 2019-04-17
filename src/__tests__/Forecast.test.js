@@ -1,14 +1,48 @@
 import React from 'react';
-import { ForecastToday, Forecast4Day } from '../components/index';
-import Forecast from '../containers/Forecast';
+import axios from 'axios';
+import 'jest-dom/extend-expect';
 
-// jest.mock('axios');
+import { act } from 'react-dom/test-utils';
+import { render, cleanup, waitForElement } from 'react-testing-library';
+
+import Forecast from '../containers/Forecast';
+import { ForecastToday, Forecast4Day } from '../components/index';
+
+import { mockJsonResponse } from '../__mocks__/weather';
+
+jest.mock('axios');
 
 describe('Container: Forecast', () => {
-    it('renders a container', () => {
-        // const getSpy = jest.spyOn('axios, 'get');
 
-    })
+    afterEach(cleanup);
+
+    it('renders todays weather', async () => {
+        axios.get.mockImplementation(() => Promise.resolve({ data: mockJsonResponse }));
+
+        const { getByTestId } = render(<Forecast />);
+        expect(getByTestId('loading')).toHaveTextContent('Loading weather data...');
+
+        const weatherToday = await waitForElement(() => getByTestId('weather-today'));
+        expect(weatherToday).toHaveTextContent('Glasgow');
+        expect(weatherToday).toHaveTextContent('Moderate Rain');
+        expect(weatherToday).toHaveTextContent('8 °');
+        expect(axios.get).toHaveBeenCalledTimes(1);
+
+    });
+
+    it('renders 4 days weather', async () => {
+        axios.get.mockImplementation(() => Promise.resolve({ data: mockJsonResponse }));
+
+        const { getByTestId } = render(<Forecast />);
+        expect(getByTestId('loading')).toHaveTextContent('Loading weather data...');
+
+        const weather4Day = await waitForElement(() => getByTestId('weather-4day'));
+        expect(weather4Day).toHaveTextContent('Wed');
+        expect(weather4Day).toHaveTextContent('Broken Clouds');
+        expect(weather4Day).toHaveTextContent('15 °');
+        expect(weather4Day).toHaveTextContent('5 °');
+
+    });
 });
 
 describe('Component: ForecastToday', () => {

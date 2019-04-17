@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import {
     Flex
@@ -8,24 +8,17 @@ import {
 import Forecast from './containers/Forecast';
 
 function App() {
-  return (
-      <Flex
-          px={4}
-          py={4}
+    return (
+        <Flex
+            px={4}
+            py={4}
 
-      >
-          <Flex
-              width={1}
-              alignItems='center'
-              justifyContent='center'
-              flexDirection='column'
+        >
 
-          >
-              <Forecast />
-          </Flex>
-      </Flex>
-  );
+            <Forecast/>
+        </Flex>
+    );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App/>, rootElement);

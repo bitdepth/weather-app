@@ -4,7 +4,8 @@ import moment from 'moment';
 import startCase from 'lodash/startCase';
 import { API_KEY, API_URL } from '../config/config';
 
-import { ForecastToday, Forecast4Day } from '../components';
+import { ForecastToday, Forecast4Day, Loading } from '../components';
+import { Flex } from '@rebass/emotion';
 
 const convertKelvinToCelsius = (kelvin) => Math.round(((kelvin - 273.15)));
 
@@ -19,7 +20,7 @@ const formatWeatherData =  (day) => {
 
 function Forecast() {
 
-    const [weatherData, setWeatherData] = useState({})
+    const [weatherData, setWeatherData] = useState({});
 
     async function getWeatherData() {
         const {data} = await axios.get(`${API_URL}${API_KEY}`);
@@ -43,8 +44,19 @@ function Forecast() {
 
     return (
         <>
-            <ForecastToday {...todaysForecast} />
-            <Forecast4Day forecast={next4DaysForecast}/>
+            {!dailyWeatherData.length ? <Loading /> :
+                <Flex
+                    width={1}
+                    alignItems='center'
+                    justifyContent='center'
+                    flexDirection='column'
+                    data-testid='weather-app'
+
+                >
+                    <ForecastToday {...todaysForecast} />
+                    <Forecast4Day forecast={next4DaysForecast}/>
+                </Flex>
+            }
         </>
     );
 }

@@ -186,6 +186,3 @@ export const mockJsonResponse = {
         }
     ]
 }
-
-export const mock5DayData = [];
-export const mockTodayData = {};

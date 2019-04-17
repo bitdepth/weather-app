@@ -1,9 +1,11 @@
 import React from 'react';
+import T from 'prop-types';
 
 import {
     Box,
     Text,
 } from '@rebass/emotion';
+
 
 export function ForecastToday({city, description, high}) {
 
@@ -13,6 +15,7 @@ export function ForecastToday({city, description, high}) {
             color='magenta'
             width={1 / 2}
             bg='white'
+            data-testid='weather-today'
         >
 
             <Text
@@ -40,3 +43,11 @@ export function ForecastToday({city, description, high}) {
         </Box>
     );
 }
+
+ForecastToday.propTypes = {
+    city: T.string.isRequired,
+    high: T.number.isRequired,
+    description: T.string.isRequired,
+    day: T.string,
+    low: T.number,
+};
