@@ -2,6 +2,9 @@
   "name": "my-weather-app",
   "version": "0.1.0",
   "private": true,
+  "engines" : {
+    "node" : ">=11.14.0"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
@@ -23,7 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test ./src/__tests__",
+    "test": "react-scripts test src/__tests__/",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

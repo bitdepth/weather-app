@@ -12,7 +12,10 @@ import { mockJsonResponse } from '../__mocks__/weather';
 
 describe('Container: Forecast', () => {
 
-    afterEach(cleanup);
+    afterEach(()  => {
+        axiosMock.get.mockReset();
+        cleanup()
+    });
 
     it('renders todays weather', async () => {
         axiosMock.get.mockImplementation(() => Promise.resolve({ data: mockJsonResponse }));
@@ -40,7 +43,7 @@ describe('Container: Forecast', () => {
         expect(weather4Day).toHaveTextContent('15 °');
         expect(weather4Day).toHaveTextContent('5 °');
 
-        expect(axiosMock.get).toHaveBeenCalledTimes(2);
+        expect(axiosMock.get).toHaveBeenCalledTimes(1);
 
 
     });
