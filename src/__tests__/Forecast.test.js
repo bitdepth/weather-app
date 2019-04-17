@@ -1,6 +1,5 @@
 import React from 'react';
-import axios from 'axios';
-import jest from 'jest';
+import axiosMock from 'axios';
 import 'jest-dom/extend-expect';
 
 import { act } from 'react-dom/test-utils';
@@ -11,14 +10,12 @@ import { ForecastToday, Forecast4Day } from '../components/index';
 
 import { mockJsonResponse } from '../__mocks__/weather';
 
-jest.mock('axios');
-
 describe('Container: Forecast', () => {
 
     afterEach(cleanup);
 
     it('renders todays weather', async () => {
-        axios.get.mockImplementation(() => Promise.resolve({ data: mockJsonResponse }));
+        axiosMock.get.mockImplementation(() => Promise.resolve({ data: mockJsonResponse }));
 
         const { getByTestId } = render(<Forecast />);
         expect(getByTestId('loading')).toHaveTextContent('Loading weather data...');
@@ -27,12 +24,12 @@ describe('Container: Forecast', () => {
         expect(weatherToday).toHaveTextContent('Glasgow');
         expect(weatherToday).toHaveTextContent('Moderate Rain');
         expect(weatherToday).toHaveTextContent('8 °');
-        expect(axios.get).toHaveBeenCalledTimes(1);
+        expect(axiosMock.get).toHaveBeenCalledTimes(1);
 
     });
 
     it('renders 4 days weather', async () => {
-        axios.get.mockImplementation(() => Promise.resolve({ data: mockJsonResponse }));
+        axiosMock.get.mockImplementation(() => Promise.resolve({ data: mockJsonResponse }));
 
         const { getByTestId } = render(<Forecast />);
         expect(getByTestId('loading')).toHaveTextContent('Loading weather data...');
@@ -42,6 +39,9 @@ describe('Container: Forecast', () => {
         expect(weather4Day).toHaveTextContent('Broken Clouds');
         expect(weather4Day).toHaveTextContent('15 °');
         expect(weather4Day).toHaveTextContent('5 °');
+
+        expect(axiosMock.get).toHaveBeenCalledTimes(2);
+
 
     });
 });
