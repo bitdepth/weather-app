@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import jest from 'jest';
 import 'jest-dom/extend-expect';
 
 import { act } from 'react-dom/test-utils';
