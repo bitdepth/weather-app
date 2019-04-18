@@ -9,7 +9,7 @@ import {
 const DayForecast = ({day, description, low, high}) => (
     <Flex
         p={3}
-        width={1 / 2}
+        width={[1, 1/2]}
         color='magenta'
         bg='white'
         justifyContent='space-between'
