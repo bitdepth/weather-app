@@ -43,6 +43,13 @@ const DayForecast = ({day, description, low, high}) => (
     </Flex>
 );
 
+DayForecast.propTypes = {
+    day: T.string,
+    description: T.string,
+    high: T.number,
+    low: T.number,
+};
+
 
 export function Forecast4Day({forecast = []}) {
     return (

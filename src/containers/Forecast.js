@@ -22,14 +22,29 @@ function Forecast() {
 
     const [weatherData, setWeatherData] = useState({});
 
-    async function getWeatherData() {
-        const {data} = await axios.get(`${API_URL}${API_KEY}`);
-
-        setWeatherData(data);
-    }
-
     useEffect(() => {
+        /**
+            I'm checking whether the component is mounted before attempting to do anything
+            with the data but a further enhancement would be to cancel the axios network
+            request altogether.
+        **/
+
+        let mounted = true;
+
+        async function getWeatherData() {
+            const {data} = await axios.get(`${API_URL}${API_KEY}`);
+
+            if(mounted) {
+                setWeatherData(data);
+            }
+        }
+
         getWeatherData()
+
+        return () => {
+            mounted = false;
+        };
+
     }, {});
 
     const {list: dailyWeatherData = [], city} = weatherData;
